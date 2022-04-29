@@ -434,6 +434,8 @@ img {
   justify-content: center;
 }
 
+.team-blob-img
+
 /*==================== SKILLS ====================*/
 .skills-container {
   row-gap: 0;
@@ -484,7 +486,7 @@ img {
 }
 
 .team-blob-img {
-  width: 140px;
+  width: 200px;
 }
 
 .skills-titles {
