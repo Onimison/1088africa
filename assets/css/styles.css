@@ -429,12 +429,18 @@ img {
   text-align: center;
 }
 
-.about-buttons {
+.pay-buttons {
   display: flex;
   justify-content: center;
 }
 
-.team-blob-img
+.team-img {
+  width: 20%;
+  border-radius: 25%;
+  display: block;
+  left: 0;
+
+}
 
 /*==================== SKILLS ====================*/
 .skills-container {
@@ -921,6 +927,67 @@ img {
   color: #fff;
 }
 
+/* pay section */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--input-color);
+  margin: 100px 50px;
+  min-height: 70vh;
+}
+
+.pay-text {
+  margin: 40px 50px 0 50px;
+  /* padding: 15px; */
+  font-size: var(--font-medium);
+
+}
+
+.pay-form {
+  display: grid;
+  /* margin: 20px auto; */
+  text-align: center;
+
+}
+
+.form {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px auto 20px auto;
+  padding: 20px;
+  width: 100%;
+  min-height: 300px;
+  display: grid;
+  -webkit-box-shadow: 0 10px 6px -6px rgb(156, 121, 121);
+  -moz-box-shadow: 0 10px 6px -6px rgb(146, 103, 103);
+  box-shadow: 0 10px 6px -6px rgb(191, 112, 112);
+}
+
+.form input {
+  margin: 5px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 10px;
+
+}
+
+
+
+
+
+.pay-btn {
+  background: var(--first-color);
+  border: none;
+
+
+}
+
 /*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
@@ -1028,6 +1095,8 @@ img {
   .testimonial-description {
     text-align: center;
   }
+
+  .pay-form {}
 }
 
 /* For medium devices */
@@ -1169,7 +1238,7 @@ img {
     justify-content: space-between;
   }
 
-  .about-buttons {
+  .pay-buttons {
     justify-content: initial;
   }
 

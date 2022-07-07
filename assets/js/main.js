@@ -1,3 +1,129 @@
+// Team Data
+
+const Team = [
+
+    {
+        id: 1,
+        title: "Momoh Mohammed Fayd",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Lead Graphics Designer and Brand Strategist",
+    },
+    {
+        id: 2,
+        title: "Bala Abdulfattah Emi",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer, Magazine Project Manager, and Marketing lead",
+    },
+    {
+        id: 3,
+        title: "Esinone Abraham Marhor",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer, Events Project Manager, and Editor",
+    },
+    {
+        id: 4,
+        title: "Oladipupo Temilade Victoria",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer and Finance Manager",
+    },
+    {
+        id: 5,
+        title: "Zaka Lawrence Ahuche",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Graphic Designer",
+    },
+    {
+        id: 6,
+        title: "Bitrus Judah Tanko",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Lead Photographer",
+    },
+    {
+        id: 7,
+        title: "Toluwani Ologun",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer and Digital Marketer",
+    },
+    {
+        id: 8,
+        title: "Egbuniwe Uchenna",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer",
+    },
+    {
+        id: 9,
+        title: "Elekwechi Blessing",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer",
+    },
+    {
+        id: 10,
+        title: "Tobi Lawal",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer and Digital Marketer",
+    },
+    {
+        id: 11,
+        title: "Faith Onyemaechi",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer",
+    },
+
+    {
+        id: 12,
+        title: "Abdulmumin Alhassan Alhaji",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Software Developer",
+    },
+    {
+        id: 13,
+        title: "Bashir Onimisi",
+        img: "assets/img/IMG_7311.jpeg",
+        job: "Content Writer, Brand Strategist and Software Developer",
+    },
+
+];
+
+const skillsContainer = document.querySelector('.skills-container');
+
+window.addEventListener('DOMContentLoaded', () => {
+    theTeam(Team);
+})
+function theTeam(teamInfo) {
+    let displayTeam = teamInfo.map((info) => {
+        return `
+        <div class="skills-content ">
+            <div class="skills-header">
+                <i class="uil uil-user-circle skills-icon"></i>
+                <div>
+                    <h1 class="skills-title">${info.title}</h1>
+                </div>
+
+                <i class="uil uil-angle-down home-scroll-arrow"></i>
+            </div>
+
+            <div class="skills-list grid">
+                <div class="skills-data">
+                            <image class="team-img" x="12" y="18" src="${info.img}" />
+                        </g>
+                    </svg>
+                    <p class="team-desc">${info.job}
+                    </p>
+                </div>
+            </div>
+
+    </div>
+        `
+    });
+
+    displayTeam = displayTeam.join("");
+
+    skillsContainer.innerHTML = displayTeam;
+
+
+}
+
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const showMenu = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
@@ -28,26 +154,41 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.querySelectorAll('.skills-content');
+/*==================== Team Section ====================*/
 
 const arrows = document.querySelectorAll('.home-scroll-arrow');
 
-skillsContent.forEach(function (content) {
-    // console.log(content);
-    const skillsHeader = document.querySelectorAll('.skills-header');
-    content.addEventListener('click', function () {
-        skillsContent.forEach((item) => {
-            if (item !== content) {
-                item.classList.remove('skills-open')
-            }
-        })
+// skillsContent.forEach(function (content) {
+//     // console.log(content);
+//     const skillsHeader = document.querySelectorAll('.skills-header');
+//     content.addEventListener('click', function () {
+//         skillsContent.forEach((item) => {
+//             if (item !== content) {
+//                 item.classList.remove('skills-open')
+//             }
+//         })
 
 
-        content.classList.toggle('skills-open')
-    })
+//         content.classList.toggle('skills-open')
+//     })
 
-})
+// })
+
+// skillsContent.forEach(function (content) {
+//     // console.log(content);
+//     const skillsHeader = document.querySelectorAll('.skills-header');
+//     content.addEventListener('click', function () {
+//         skillsContent.forEach((item) => {
+//             if (item !== content) {  
+//                 item.classList.remove('skills-open')
+//             }
+//         })
+
+
+//         content.classList.toggle('skills-open')
+//     })
+
+// })
 
 
 
@@ -55,7 +196,8 @@ skillsContent.forEach(function (content) {
 
 
 
-
+const skillsContent = document.querySelectorAll('.skills-content');
+const skillsHeader = document.querySelectorAll('.skills-header');
 
 // skillsHeader.forEach(function (arr) {
 //     arr.addEventListener('click', function (e) {
@@ -66,20 +208,19 @@ skillsContent.forEach(function (content) {
 
 
 
-// function toggleSkills() {
-//     let itemClass = this.parentNode.ClassName
+function toggleSkills() {
+    let itemClass = this.parentNode.ClassName
+    for (i = 0; i < skillsContent.length; i++) {
+        skillsContent[i].className = 'skills-content skills-close'
+    }
+    if (itemClass === 'skills-content skills-close') {
+        this.parentNode.className = 'skills-content skills-open'
+    }
 
-//     for (i = 0; i < skillsContent.length; i++) {
-//         skillsContent[i].className = 'skills-content skills-close'
-//     }
-//     if (itemClass === 'skills-content skills-close') {
-//         this.parentNode.className = 'skills-content skills-open'
-//     }
-
-// }
-// skillsHeader.forEach((el) => {
-//     el.addEventListener('click', toggleSkills)
-// })
+}
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+})
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]');
