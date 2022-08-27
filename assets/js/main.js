@@ -5,81 +5,81 @@ const Team = [
     {
         id: 1,
         title: "Momoh Mohammed Fayd",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/fayd.jpg",
         job: "Lead Graphics Designer and Brand Strategist",
     },
     {
         id: 2,
         title: "Bala Abdulfattah Emi",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/abdul.jpg",
         job: "Content Writer, Magazine Project Manager, and Marketing lead",
     },
     {
         id: 3,
         title: "Esinone Abraham Marhor",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/abee.jpg",
         job: "Content Writer, Events Project Manager, and Editor",
     },
     {
         id: 4,
         title: "Oladipupo Temilade Victoria",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/temmy.jpg",
         job: "Content Writer and Finance Manager",
     },
     {
         id: 5,
         title: "Zaka Lawrence Ahuche",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/.jpg",
         job: "Graphic Designer",
     },
     {
         id: 6,
         title: "Bitrus Judah Tanko",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/",
         job: "Lead Photographer",
     },
     {
         id: 7,
         title: "Toluwani Ologun",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/tolu.jpg",
         job: "Content Writer and Digital Marketer",
     },
     {
         id: 8,
         title: "Egbuniwe Uchenna",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/enai.jpg",
         job: "Content Writer",
     },
     {
         id: 9,
         title: "Elekwechi Blessing",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/ebere.jpg",
         job: "Content Writer",
     },
     {
         id: 10,
         title: "Tobi Lawal",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/",
         job: "Content Writer and Digital Marketer",
     },
     {
         id: 11,
         title: "Faith Onyemaechi",
-        img: "assets/img/IMG_7311.jpeg",
+        img: "assets/img/faith.jpeg",
         job: "Content Writer",
     },
 
     {
         id: 12,
         title: "Abdulmumin Alhassan Alhaji",
-        img: "assets/img/IMG_7311.jpeg",
-        job: "Software Developer",
+        img: "assets/img/alhaji.jpg",
+        job: "Web Developer",
     },
     {
         id: 13,
         title: "Bashir Onimisi",
         img: "assets/img/IMG_7311.jpeg",
-        job: "Content Writer, Brand Strategist and Software Developer",
+        job: "Content Writer, Brand Strategist and Web Developer",
     },
 
 ];
@@ -97,18 +97,17 @@ function theTeam(teamInfo) {
                 <i class="uil uil-user-circle skills-icon"></i>
                 <div>
                     <h1 class="skills-title">${info.title}</h1>
+                    <p class="team-desc">${info.job}</p>
                 </div>
-
-                <i class="uil uil-angle-down home-scroll-arrow"></i>
-            </div>
-
-            <div class="skills-list grid">
+                
+                </div>
+                
+                <div class="skills-list grid">
                 <div class="skills-data">
-                            <image class="team-img" x="12" y="18" src="${info.img}" />
+                            <image class="team-img"  src="${info.img}" />
                         </g>
                     </svg>
-                    <p class="team-desc">${info.job}
-                    </p>
+                    
                 </div>
             </div>
 

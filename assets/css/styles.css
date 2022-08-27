@@ -296,6 +296,7 @@ img {
 
 .home-img {
   width: 300px;
+  padding: var(--mb-2-5);
 }
 
 .home-data {
@@ -434,11 +435,14 @@ img {
   justify-content: center;
 }
 
+
+
 .team-img {
-  width: 20%;
-  border-radius: 25%;
+  width: 60%;
+  border-radius: 50%;
   display: block;
   left: 0;
+  margin-top: 0;
 
 }
 
@@ -495,22 +499,27 @@ img {
   width: 200px;
 }
 
-.skills-titles {
+.skills-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--mb-0-5);
 }
 
-.skills-close .skills-list {
-  height: 0;
-  overflow: hidden;
+.skills-data {
+  margin-top: 0;
+  padding-top: 0;
 }
 
+/* .skills-close .skills-list {
+  height: 0;
+  overflow: hidden;
+} */
+/* 
 .skills-open .skills-list {
   overflow: visible;
   height: max-content;
   margin-bottom: var(--mb-2-5);
-}
+} */
 
 .skills-open .home-scroll-arrow {
   transform: rotate(-180deg);
